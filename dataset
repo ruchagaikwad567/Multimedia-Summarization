@@ -1,2 +1,14 @@
 Audio dataset link: https://www.kaggle.com/datasets/nfedorov/audio-summarization
 download file from above and use it
+import the below dependencies:
+
+
+import os
+import openai
+from flask import Flask, render_template, request, jsonify
+import speech_recognition as sr
+import assemblyai as aai
+from textSummarization import summarize
+from transformers import T5ForConditionalGeneration, T5Tokenizer
+from urllib.parse import urlparse, parse_qs
+from youtube_transcript_api import YouTubeTranscriptApi as ytt
