@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Summarizer</title>
+</head>
+<body>
+    <h1>Video Summarizer 🎬</h1>
+
+    <form method="post" action="{{ url_for('get_summary') }}">
+        <label for="video_link">Enter video link:</label>
+        <input type="text" id="video_link" name="video_link" required>
+        <button type="submit">Get Summary</button>
+    </form>
+
+    <!-- Display any error messages here -->
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
